@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  database:
+    image: mysql/mysql-server:8.0
+    environment:
+    - MYSQL_DATABASE=test
+    - MYSQL_ROOT_PASSWORD=qwerty
+    - MYSQL_USER=tt
+    - MYSQL_PASSWORD=qwerty
+    volumes:
+      - './docker/table.sql:/docker-entrypoint-initdb.d/init.sql'
+    ports:
+      - "3306:3306"

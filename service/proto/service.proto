@@ -1,0 +1,25 @@
+syntax ="proto3";
+
+package proto;
+option go_package = "./;pb";
+service Search{
+    rpc GetBooks(RequestAuthor)returns (ResponseBook);
+    rpc GetAuthors(RequestBook)returns ( ResponseAuthor);
+
+}
+
+message RequestAuthor{
+    string name = 1;
+}
+
+message RequestBook{
+    string title  = 1;
+}
+
+message ResponseAuthor{
+  repeated string name = 1;
+}
+
+message ResponseBook{
+  repeated string title = 1;
+}

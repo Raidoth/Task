@@ -1,0 +1,7 @@
+{
+    "usermysql":"tt",
+    "passwordmysql":"qwerty",
+    "addressmysql":"localhost:3306",
+    "dbmysql":"test",
+    "portgrpc":"50051"
+}
